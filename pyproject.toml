@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chetane-ka-exemplarbleed"
+version = "0.1.0"
+description = "扫描提示词中的示例段落，检测示例之间答案不一致、示例中暗藏真实答案等问题"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "chetane-ka" }]
+keywords = ["analysis", "observability", "evaluation", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://chetane-ka.github.io"
+Repository = "https://github.com/chetane-ka/exemplarbleed"
+Issues = "https://github.com/chetane-ka/exemplarbleed/issues"
+
+[project.scripts]
+exemplarbleed = "exemplarbleed:main"
+
+[tool.setuptools]
+py-modules = ["exemplarbleed"]
